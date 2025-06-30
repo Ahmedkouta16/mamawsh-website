@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مطعم المموش - الطبق الكويتي الأصيل</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+        /* --- ستايل عام --- */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f8f4ec;
+            color: #3a2f1b;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+        }
+        header {
+            background: #997d50;
+            padding: 40px 20px;
+            text-align: center;
+            color: #f4e8d3;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        main {
+            max-width: 1100px;
+            margin: 40px auto 60px auto;
+            padding: 0 20px;
+        }
+        h2.section-title {
+            font-size: 2.4rem;
+            border-bottom: 4px solid #997d50;
+            padding-bottom: 8px;
+            margin-bottom: 30px;
+            width: fit-content;
+        }
+        p.description {
+            font-size: 1.25rem;
+            max-width: 850px;
+            color: #5a4a2c;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        /* --- قسم القصة --- */
+        .story-section {
+            text-align: center;
+        }
+
+        /* --- معرض الصور --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery figcaption {
+            margin-top: 10px;
+            font-weight: 700;
+            color: #7a6844;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* --- قسم الأنواع --- */
+        .types-section {
+            margin-top: 60px;
+        }
+        .type-item {
+            background: #f9f7f1;
+            border: 2px solid #b59f83;
+            border-radius: 18px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 14px rgba(181, 159, 131, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        .type-item:hover {
+            box-shadow: 0 8px 20px rgba(181, 159, 131, 0.7);
+        }
+        .type-title {
+            font-size: 1.6rem;
+            color: #886f3c;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        .type-desc {
+            font-size: 1.1rem;
+            color: #5d4e2f;
+        }
+
+        /* --- قسم التواصل --- */
+        .contact-section {
+            background: #997d50;
+            color: #f4e8d3;
+            padding: 45px 30px;
+            text-align: center;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 0 auto 80px auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+        .contact-info {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            font-weight: 700;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1rem;
+            color: #886f3c;
+            border-top: 1px solid #b59f83;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 700px) {
+            header {
+                font-size: 2.3rem;
+                padding: 25px 10px;
+            }
+            main {
+                margin: 25px auto 50px auto;
+            }
+            h2.section-title {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+            .contact-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>مطعم المموش<br>طبق واحد. أصالة لا تُنسى.</header>
+
+<main>
+
+<section class="story-section">
+    <h2 class="section-title">قصة المموش</h2>
+    <p class="description">
+        منذ قرون، في قلب الخليج، وُلد المموش؛ الطبق الكويتي الفريد من نوعه، المُطهو داخل طين خاص ليحفظ نكهته الأصلية ويجعل كل لقمة رحلة عبر الزمن.
+        المموش ليس مجرد طعام، بل هو قصة تروى عبر الأجيال، وذكريات تُحكى على مائدة العائلة في كل بيت.
+    </p>
+</section>
+
+<section class="types-section">
+    <h2 class="section-title">أنواع المموش التي نقدمها</h2>
+
+    <article class="type-item">
+        <h3 class="type-title">المموش البحري</h3>
+        <p class="type-desc">
+            مزيج فاخر من الأسماك الطازجة والجمبري، مطهو بعناية داخل الطين مع توابل سرية تمنحه نكهة بحرية لا تُقاوم.
+        </p>
+    </article>
+
+    <article class="type-item">
+        <h3 class="type-title">مموش اللحم التقليدي</h3>
+        <p class="type-desc">
+            قطع لحم الضأن الطرية والمتبلة ببهارات خاصة، تُطهى داخل الطين لتحافظ على العصارة والطعم الغني.
+        </p>
+    </article>
+
+    <article class="type-item">
+        <h3 class="type-title">مموش الدجاج</h3>
+        <p class="type-desc">
+            دجاج طازج متبل بتوابل المطبخ الخليجي، يُطهى ببطء داخل طين المموش ليخرج طرياً ومشبعاً بالنكهات.
+        </p>
+    </article>
+
+    <article class="type-item">
+        <h3 class="type-title">مموش الخضروات</h3>
+        <p class="type-desc">
+            مزيج من الخضروات الموسمية الطازجة مع توابل مميزة، لطبق نباتي متكامل ولذيذ.
+        </p>
+    </article>
+</section>
+
+<section class="gallery">
+    <figure>
+        <img src="mamawsh1.jpg" alt="مموش بحري فاخر" />
+        <figcaption>المموش البحري</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh2.jpg" alt="مموش لحم الضأن" />
+        <figcaption>مموش اللحم التقليدي</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh3.jpg" alt="مموش الدجاج" />
+        <figcaption>مموش الدجاج</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh4.jpg" alt="مموش الخضروات" />
+        <figcaption>مموش الخضروات</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh5.jpg" alt="مموش بالفاكهة" />
+        <figcaption>مموش بالفاكهة</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh6.jpg" alt="مموش مع صوص خاص" />
+        <figcaption>مموش مع صوص خاص</figcaption>
+    </figure>
+    <figure>
+        <img src="mamawsh7.jpg" alt="مموش تقليدي في الطين" />
+        <figcaption>المموش التقليدي في الطين</figcaption>
+    </figure>
+</section>
+
+<section class="contact-section">
+    <h2>تواصل معنا</h2>
+    <p class="contact-info">رقم الواتساب: <strong>+971 50 212 3110</strong></p>
+    <a href="https://wa.me/971502123110" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="اتصل بنا عبر واتساب">
+        تواصل عبر واتساب الآن
+    </a>
+</section>
+
+</main>
+
+<footer>© 2025 مطعم المموش - جميع الحقوق محفوظة.</footer>
+
+</body>
+</html>
